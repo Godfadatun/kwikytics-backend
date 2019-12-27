@@ -18,9 +18,9 @@ class CreateThriftsTable extends Migration
             $table->integer('user_id');
             $table->string('thrift_name');
             $table->longText('description');
-            $table->tinyInterger('duration');
+            $table->tinyInteger('duration');
             $table->double('amount', 12, 2)->default(0.00);
-            $table->tinyInterger('interval');
+            $table->tinyInteger('interval');
             $table->timestamps();
         });
     }
