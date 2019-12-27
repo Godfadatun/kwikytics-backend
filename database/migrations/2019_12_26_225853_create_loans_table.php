@@ -15,13 +15,14 @@ class CreateLoansTable extends Migration
     {
         Schema::create('loans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
-            $table->integer('loaner_id');
+            $table->bigInteger('user_id');
+            $table->bigInteger('loaner_id');
             $table->date('start_date');
             $table->date('end_date');
-            $table->integer('amount');
-            $table->integer('interest');
-            $table->integer('fine');
+            $table->double('amount', 12, 2)->default(0.00);
+            $table->double('interest', 12, 2)->default(0.00);
+            $table->double('fine', 12, 2)->default(0.00);
+            $table->dateTime('is_paid')->nullable();
             $table->timestamps();
         });
     }

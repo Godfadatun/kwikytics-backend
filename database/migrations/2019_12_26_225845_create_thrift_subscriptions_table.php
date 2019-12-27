@@ -15,8 +15,8 @@ class CreateThriftSubscriptionsTable extends Migration
     {
         Schema::create('thrift_subscriptions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
-            $table->integer('thrift_id');
+            $table->bigInteger('user_id');
+            $table->bigIntegerteger('thrift_id');
             $table->date('start_date');
             $table->date('end_date');
             $table->timestamps();

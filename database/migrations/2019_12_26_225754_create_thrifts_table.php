@@ -17,10 +17,10 @@ class CreateThriftsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->string('thrift_name');
-            $table->string('description');
-            $table->integer('duration');
-            $table->integer('amount');
-            $table->integer('interval');
+            $table->longText('description');
+            $table->tinyInterger('duration');
+            $table->double('amount', 12, 2)->default(0.00);
+            $table->tinyInterger('interval');
             $table->timestamps();
         });
     }

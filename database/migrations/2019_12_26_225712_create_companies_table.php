@@ -15,7 +15,7 @@ class CreateCompaniesTable extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
+            $table->bigInteger('user_id');
             $table->string('color_1');
             $table->string('color_2');
             $table->string('logo_img');
