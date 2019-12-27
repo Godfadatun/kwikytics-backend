@@ -17,7 +17,7 @@ class CreateCardsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
             $table->string('card_no');
-            $table->string('token');
+            $table->string('token');  
             $table->timestamps();
         });
     }
